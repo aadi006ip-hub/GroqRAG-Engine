@@ -5,6 +5,13 @@ GroqRAG Engine is a lightweight, ultra-fast Retrieval-Augmented Generation (RAG)
 
 ---
 
+## 🔗 Live Deployments & UI Links
+✨ **Click on the badges below to interact with the project and view the user interface:**
+
+[![Streamlit App](streamlit.jpg)]()
+
+---
+
 ## 🌟 Key Features
 
 * **⚡ Sub-Second Generation via Groq:** Utilizes Groq’s LPU hardware with `llama-3.3-70b-versatile` to deliver near-instant, context-grounded responses.
