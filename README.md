@@ -1,5 +1,3 @@
-Here is the complete, production-ready README.md file for your repository. It covers everything from project architecture and file structure to installation steps, code walkthroughs, and resume highlights.
-```markdown
 # ⚡ GroqRAG Engine
 > **High-Speed Document Intelligence Assistant using FAISS, HuggingFace Embeddings, and Groq LPU**
 
