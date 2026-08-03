@@ -6,7 +6,7 @@ GroqRAG Engine is a lightweight, ultra-fast Retrieval-Augmented Generation (RAG)
 ## 🔗 Live Deployments & UI Links
 ✨ **Click on the badges below to interact with the project and view the user interface:**
 
-[![Streamlit App](streamlit.jpg)]()
+[![Streamlit App](streamlit.jpg)](https://groqrag-engine-inrqdypw5loak5bkxmjdhp.streamlit.app/)
 
 ---
 
