@@ -1,6 +1,4 @@
 # ⚡ GroqRAG Engine
-> **High-Speed Document Intelligence Assistant using FAISS, HuggingFace Embeddings, and Groq LPU**
-
 GroqRAG Engine is a lightweight, ultra-fast Retrieval-Augmented Generation (RAG) system built with **LangChain**, **FAISS**, **HuggingFace Embeddings**, and **Groq LPU (`llama-3.3-70b-versatile`)**. It allows users to upload PDF, TXT, or Markdown documents and query them in natural language with sub-second response times and full source citation transparency.
 
 ---
