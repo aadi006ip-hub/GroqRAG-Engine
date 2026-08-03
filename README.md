@@ -175,13 +175,30 @@ class DocumentProcessor:
 ### core/vector_store.py
 ```python
 from typing import List
-from langchain_huggingface import HuggingFaceEmbeddings
+import streamlit as st
+from sentence_transformers import SentenceTransformer
+from langchain_core.embeddings import Embeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 
+# Model memory mein sirf EK BAAR load hoga (No rerun crashes)
+@st.cache_resource(show_spinner="Loading Embedding Model...")
+def load_embedding_model():
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+class LocalEmbeddings(Embeddings):
+    def __init__(self):
+        self.model = load_embedding_model()
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return self.model.encode(texts, show_progress_bar=False).tolist()
+
+    def embed_query(self, text: str) -> List[float]:
+        return self.model.encode(text, show_progress_bar=False).tolist()
+
 class FAISSVectorStoreManager:
-    def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
-        self.embeddings = HuggingFaceEmbeddings(model_name=model_name)
+    def __init__(self):
+        self.embeddings = LocalEmbeddings()
         self.vector_store = None
 
     def create_vector_store(self, chunks: List[Document]):
@@ -332,11 +349,6 @@ if prompt := st.chat_input("Ask a question about your uploaded document..."):
                 })
 
 ```
-## 📌 Resume Highlights
-**Project Title:** **GroqRAG Engine**
- * **Engineered an end-to-end RAG system** using **LangChain, FAISS, and Groq API (Llama 3.3)** to enable sub-second semantic search and context-aware Q&A over PDF and text documents.
- * **Optimized embedding pipeline** by integrating **HuggingFace (all-MiniLM-L6-v2)** for local vector encoding and similarity search, eliminating external embedding API costs.
- * **Built an interactive Streamlit dashboard** featuring multi-file document chunking, dynamic top-K retrieval control, and inline source chunk citations for verifiable outputs.
 ## 📄 License
 Distributed under the MIT License. See LICENSE for more details.
 ```
