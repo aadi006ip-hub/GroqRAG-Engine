@@ -115,15 +115,15 @@ streamlit run app.py
 ## 📝 Complete Code Files
 ### requirements.txt
 ```text
-streamlit>=1.35.0
-langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-groq>=0.1.0
-langchain-huggingface>=0.0.1
-sentence-transformers>=2.7.0
-faiss-cpu>=1.8.0
-pypdf>=4.2.0
-python-dotenv>=1.0.1
+streamlit
+langchain
+langchain-community
+langchain-groq
+sentence-transformers
+faiss-cpu
+pypdf
+python-dotenv
+torchvision
 
 ```
 ### core/processor.py
