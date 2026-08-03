@@ -67,6 +67,14 @@ GroqRAG-Engine/
    Vectors are indexed in an in-memory FAISS store. When a query is received, FAISS retrieves the K most semantically relevant document chunks.
  4. **Augmented Groq Generation (rag_chain.py):**
    The retrieved text chunks and user query are injected into a strict system prompt. Groq processes this context using llama-3.3-70b-versatile to produce an accurate, hallucination-free answer with cited sources.
+
+
+### 2. Live Interface Preview
+The production application features dynamic feedback cards and responsive metric monitoring based on user sliding actions.
+
+![Streamlit App Interface](Streamlit.png)
+
+
 ## 🚀 Quickstart Guide
 ### 1. Clone the Repository
 ```bash
