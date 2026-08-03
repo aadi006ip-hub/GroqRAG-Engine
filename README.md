@@ -72,7 +72,7 @@ GroqRAG-Engine/
 ### 2. Live Interface Preview
 The production application features dynamic feedback cards and responsive metric monitoring based on user sliding actions.
 
-![Streamlit App Interface](Streamlit.png)
+![Streamlit App Interface](RAG UI.png)
 
 
 ## 🚀 Quickstart Guide
